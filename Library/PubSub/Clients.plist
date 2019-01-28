@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Clients</key>
+	<dict>
+		<key>1</key>
+		<dict>
+			<key>DateUsed</key>
+			<date>2019-01-28T07:07:44Z</date>
+			<key>Signature</key>
+			<string>com.apple.Safari</string>
+		</dict>
+	</dict>
+	<key>Feeds</key>
+	<dict/>
+	<key>Subscriptions</key>
+	<dict>
+		<key>1</key>
+		<dict>
+			<key>Client</key>
+			<integer>1</integer>
+			<key>ExpirationInterval</key>
+			<real>1209600</real>
+			<key>MaxEnclosureSize</key>
+			<real>8388608</real>
+			<key>RefreshInterval</key>
+			<real>1800</real>
+			<key>RefreshesInBackground</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
