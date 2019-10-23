@@ -4,6 +4,7 @@
 	"description": "%description%",
 	"version": "1.0.0",
 	"publisher": "vscode",
+	"license": "MIT",
 	"icon": "icons/logo.png",
 	"engines": {
 		"vscode": "0.10.x"
@@ -30,7 +31,8 @@
 				"php.validate.executablePath": {
 					"type": ["string", "null"],
 					"default": null,
-					"description": "%configuration.validate.executablePath%"
+					"description": "%configuration.validate.executablePath%",
+					"scope": "machine"
 				},
 				"php.validate.run": {
 					"type": "string",
@@ -64,6 +66,6 @@
 		"vscode-nls": "^4.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "^10.12.21"
+		"@types/node": "^10.14.8"
 	}
 }

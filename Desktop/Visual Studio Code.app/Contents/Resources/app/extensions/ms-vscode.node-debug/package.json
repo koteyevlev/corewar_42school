@@ -1,7 +1,7 @@
 {
 	"name": "node-debug",
 	"displayName": "Node Debug (legacy)",
-	"version": "1.33.3",
+	"version": "1.35.3",
 	"publisher": "ms-vscode",
 	"description": "%extension.description%",
 	"icon": "images/node-debug-icon.png",
@@ -34,7 +34,7 @@
 		"minimatch": "3.0.4",
 		"request-light": "0.2.4",
 		"source-map": "0.6.1",
-		"vscode-debugadapter": "1.34.0",
+		"vscode-debugadapter": "1.35.0",
 		"vscode-nls": "4.0.0"
 	},
 	"repository": {
@@ -65,10 +65,10 @@
 		"tslint-microsoft-contrib": "5.2.1",
 		"tsutils": "3.5.0",
 		"typescript": "2.9.2",
-		"vsce": "^1.58.0",
+		"vsce": "^1.62.0",
 		"vscode": "1.1.21",
-		"vscode-debugadapter-testsupport": "1.34.0",
-		"vscode-debugprotocol": "1.34.0",
+		"vscode-debugadapter-testsupport": "1.35.0",
+		"vscode-debugprotocol": "1.35.0",
 		"vscode-nls-dev": "3.2.3",
 		"webpack": "^4.25.1",
 		"webpack-cli": "^3.1.2"
@@ -76,6 +76,17 @@
 	"main": "./dist/extension.js",
 	"activationEvents": ["onDebugInitialConfigurations", "onDebugResolve:node", "onCommand:extension.pickNodeProcess", "onCommand:extension.node-debug.toggleSkippingFile", "onCommand:extension.node-debug.pickLoadedScript", "onCommand:extension.node-debug.attachNodeProcess", "onCommand:extension.node-debug.startAutoAttach", "onCommand:extension.node-debug.startWithStopOnEntry"],
 	"contributes": {
+		"configuration": {
+			"title": "Node debug",
+			"properties": {
+				"debug.node.showUseWslIsDeprecatedWarning": {
+					"scope": "window",
+					"type": "boolean",
+					"description": "%debug.node.showUseWslIsDeprecatedWarning.description%",
+					"default": true
+				}
+			}
+		},
 		"menus": {
 			"debug/callstack/context": [{
 				"command": "extension.node-debug.toggleSkippingFile",
@@ -381,7 +392,8 @@
 						"useWSL": {
 							"type": "boolean",
 							"description": "%node.launch.useWSL.description%",
-							"default": true
+							"default": true,
+							"deprecationMessage": "%node.launch.useWSL.deprecation%"
 						},
 						"trace": {
 							"type": ["boolean", "string"],

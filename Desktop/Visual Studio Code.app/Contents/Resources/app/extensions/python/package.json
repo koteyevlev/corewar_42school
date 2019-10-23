@@ -4,14 +4,18 @@
 	"description": "%description%",
 	"version": "1.0.0",
 	"publisher": "vscode",
-	"engines": { "vscode": "*" },
+	"license": "MIT",
+	"engines": {
+		"vscode": "*"
+	},
 	"activationEvents": ["onLanguage:python"],
-	"main": "./out/pythonMain",
+	"main": "./dist/pythonMain",
 	"contributes": {
 		"languages": [{
 			"id": "python",
-			"extensions": [ ".py", ".rpy", ".pyw", ".cpy", ".gyp", ".gypi", ".snakefile", ".smk", ".pyi", ".ipy"],
-			"aliases": [ "Python", "py" ],
+			"extensions": [".py", ".rpy", ".pyw", ".cpy", ".gyp", ".gypi", ".pyi", ".ipy"],
+			"aliases": ["Python", "py"],
+			"filenames": ["Snakefile"],
 			"firstLine": "^#!\\s*/.*\\bpython[0-9.-]*\\b",
 			"configuration": "./language-configuration.json"
 		}],
@@ -19,7 +23,7 @@
 			"language": "python",
 			"scopeName": "source.python",
 			"path": "./syntaxes/MagicPython.tmLanguage.json"
-		},{
+		}, {
 			"scopeName": "source.regexp.python",
 			"path": "./syntaxes/MagicRegExp.tmLanguage.json"
 		}]
